@@ -1,16 +1,18 @@
 
 'use client'
-import {AppProgressBar as ProgressBar} from "next-nprogress-bar"
 import { ThemeProvider } from "next-themes"
+import {AppProgressBar as ProgressBar} from "next-nprogress-bar"
 
 export function Providers({children,...props}) {
   return (
     <>
-    <ProgressBar
-        height="4px"
-        color="#00f"
+      <ProgressBar
+      height="4px"
+      color="#fffd00"
+      options={{ showSpinner: false }}
+      shallowRouting
       />
-      <ThemeProvider>
+      <ThemeProvider {...props}>
         {children}
       </ThemeProvider>
     </>
